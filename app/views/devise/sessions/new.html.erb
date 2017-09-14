@@ -1,26 +1,43 @@
-<h2>Log in</h2>
+<%= content_for :css do %>
+<style>
+    div.ts.raised.segment
+    {
+        max-width:300px;
+        margin:0 auto;
+    }
+</style>
+<% end %>
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name), html:({class:"ts form"}) ) do |f| %>
-    <div class="field">
-        <%= f.label :email %><br />
-            <%= f.email_field :email, autofocus: true %>
-    </div>
+<h2 class="ts center aligned header">
+    松浦、Rubyで構築するのバグトラッキングシステム。
+    <br /><small class="sub header">ハグ、しよ？</small>
+</h2>
 
-    <div class="field">
-        <%= f.label :password %><br />
-            <%= f.password_field :password, autocomplete: "off" %>
-    </div>
-
-    <% if devise_mapping.rememberable? -%>
+<div class="ts raised segment">
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name), html:({class:"ts form"}) ) do |f| %>
         <div class="field">
-            <%= f.check_box :remember_me %>
+            <%= f.label :email %>
+            <%= f.email_field :email, autofocus: true %>
+        </div>
+
+        <div class="field">
+            <%= f.label :password %>
+            <%= f.password_field :password, autocomplete: "off" %>
+        </div>
+
+        <% if devise_mapping.rememberable? -%>
+        <div class="field">
+            <div class="ts checkbox">
+                <%= f.check_box :remember_me %>
                 <%= f.label :remember_me %>
+            </div>
         </div>
         <% end -%>
 
-            <div class="actions">
-                <%= f.submit "Log in" %>
-            </div>
-            <% end %>
+        <div class="actions">
+            <%= f.submit "ログイン" , class: "ts positive fluid button" %>
+        </div>
+    <% end %>
+</div>
 
-                <%= render "devise/shared/links" %>
+<%#= render "devise/shared/links" %>

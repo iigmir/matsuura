@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Project:</strong>
+  <%= @issue.project %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @issue.title %>
+</p>
+
+<p>
+  <strong>Context:</strong>
+  <%= @issue.context %>
+</p>
+
+<p>
+  <strong>Asker:</strong>
+  <%= @issue.asker %>
+</p>
+
+<p>
+  <strong>Developer:</strong>
+  <%= @issue.developer %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @issue.status %>
+</p>
+
+<p>
+  <strong>Priority:</strong>
+  <%= @issue.priority %>
+</p>
+
+<%= link_to 'Edit', edit_issue_path(@issue) %> |
+<%= link_to 'Back', issues_path %>

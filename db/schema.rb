@@ -10,14 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170914124227) do
+ActiveRecord::Schema.define(version: 20170914174713) do
 
   create_table "issues", force: :cascade do |t|
     t.string "project", default: ""
     t.string "title", default: ""
-    t.string "context", default: ""
+    t.text "context", default: ""
     t.string "asker", default: ""
-    t.string "issuer", default: ""
+    t.string "developer", default: ""
     t.integer "status", default: 0
     t.integer "priority", default: 0
     t.datetime "created_at", null: false

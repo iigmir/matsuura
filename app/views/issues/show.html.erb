@@ -1,39 +1,67 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Project:</strong>
-  <%= @issue.project %>
-</p>
+<div class="ts segments">
+    <div class="ts info segment">
+        <strong>Project:</strong>
+    </div>
+    <div class="ts segment">
+        <%= @issue.project %>
+    </div>
+</div>
 
-<p>
-  <strong>Title:</strong>
-  <%= @issue.title %>
-</p>
+<div class="ts segments">
+    <div class="ts info segment">
+        <strong>Title:</strong>
+    </div>
+    <div class="ts segment">
+        <%= @issue.title %>
+    </div>
+</div>
 
-<p>
-  <strong>Context:</strong>
-  <%= @issue.context %>
-</p>
+<div class="ts segments">
+    <div class="ts info segment">
+        <strong>Context:</strong>
+    </div>
+    <div class="ts segment">
+        <%= @issue.context %>
+    </div>
+</div>
 
-<p>
-  <strong>Asker:</strong>
-  <%= @issue.asker %>
-</p>
+<div class="ts segments">
+    <div class="ts info segment">
+        <strong>Asker:</strong>
+    </div>
+    <div class="ts segment">
+        <%= @issue.asker %>
+    </div>
+</div>
 
-<p>
-  <strong>Developer:</strong>
-  <%= @issue.developer %>
-</p>
+<div class="ts segments">
+    <div class="ts info segment">
+        <strong>Developer:</strong>
+    </div>
+    <div class="ts segment">
+        <%= @issue.developer %>
+    </div>
+</div>
 
-<p>
-  <strong>Status:</strong>
-  <%= @issue.status %>
-</p>
+<div class="ts segments">
+    <div class="ts info segment">
+        <strong>Status:</strong>
+    </div>
+    <div class="ts segment">
+        <%= @issue.status %>
+    </div>
+</div>
 
-<p>
-  <strong>Priority:</strong>
-  <%= @issue.priority %>
-</p>
+<div class="ts segments">
+    <div class="ts info segment">
+        <strong>Priority:</strong>
+    </div>
+    <div class="ts segment">
+        <%= @issue.priority %>
+    </div>
+</div>
 
 <%= link_to 'Edit', edit_issue_path(@issue) %> |
 <%= link_to 'Back', issues_path %>

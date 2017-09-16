@@ -7,12 +7,12 @@
     <tr>
       <th>プロジェクト</th>
       <th>タイトル</th>
-      <th>事状</th>
-      <th>著者</th>
-      <th>開発者</th>
+      <th hidden>事状</th>
+      <th>報告者</th>
+      <th>訂正者</th>
       <th>状況</th>
       <th>順番</th>
-      <th colspan="3"></th>
+      <th colspan="3">アクション</th>
     </tr>
   </thead>
 
@@ -21,14 +21,14 @@
       <tr>
         <td><%= issue.project %></td>
         <td><%= issue.title %></td>
-        <td><%= issue.context %></td>
+        <td hidden><%= issue.context %></td>
         <td><%= issue.asker %></td>
         <td><%= issue.developer %></td>
         <td><%= issue.status %></td>
         <td><%= issue.priority %></td>
-        <td><%= link_to 'Show', issue %></td>
-        <td><%= link_to 'Edit', edit_issue_path(issue) %></td>
-        <td><%= link_to 'Destroy', issue, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'よく見る', issue %></td>
+        <td><%= link_to '編集', edit_issue_path(issue) %></td>
+        <td><%= link_to '削除', issue, method: :delete, data: { confirm: 'よろしいですが？?' } %></td>
       </tr>
     <% end %>
   </tbody>

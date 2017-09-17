@@ -24,9 +24,10 @@
                 </div>
                 <i class="dropdown icon"></i>
                 <div class="menu">
-                    <%#= link_to "繁體中文", :controller => controller_name, :action => action_name, :locale => "zh-TW" , { :class => "item" } %>
-                    <%= link_to "日本語", { controller: controller_name, action: action_name, locale: "ja" },{ class: "item" } %>
+                    <%= link_to "台灣正體", { locale: "zh-TW" } , { :class => "item" } %>
+                    <%= link_to "中国简体", { locale: "zh-CN" } , { :class => "item" } %>
                     <%= link_to "English", { locale: "en" },{ class: "item" } %>
+                    <%= link_to "日本語", { locale: "ja" },{ class: "item" } %>
                 </div>
             </div>
         </nav>

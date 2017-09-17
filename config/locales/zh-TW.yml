@@ -1,0 +1,9 @@
+# Please refer ./en.yml
+
+zh-TW:
+  intro:
+    title: "松浦、以Rails架設的缺陷跟蹤管理系統。"
+  navbar:
+    language:
+      choosen: "台灣正體"
+      dropdown: "語言"

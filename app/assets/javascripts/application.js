@@ -12,3 +12,5 @@
 //
 //= require rails-ujs
 //= require_tree .
+
+ts('nav #i18n_menu').dropdown();

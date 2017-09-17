@@ -29,10 +29,10 @@
 # To learn more, please read the Rails Internationalization guide
 # available at http://guides.rubyonrails.org/i18n.html.
 
-en:
+ja:
   intro:
-    title: "Matsuura, a bug tracking system build with Rails."
+    title: "松浦、Railsで構築するのバグトラッキングシステム。"
   navbar:
     language:
-      choosen: "English"
-      dropdown: "Language"
+      choosen: "日本語"
+      dropdown: "言語"

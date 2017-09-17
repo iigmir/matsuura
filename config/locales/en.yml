@@ -50,7 +50,7 @@ en:
       status: "Status"
       priority: "Priority"
     action:
-      add:  "Add issue"
+      add:  "Report new issue"
       item: "Action"
       show: "View"
       edit: "Edit"

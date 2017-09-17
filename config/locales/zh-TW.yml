@@ -21,7 +21,7 @@ zh-TW:
       status: "狀態"
       priority: "優先順序"
     action:
-      add:  "新增錯誤"
+      add:  "報告新錯誤"
       item: "動作"
       show: "詳見"
       edit: "編輯"

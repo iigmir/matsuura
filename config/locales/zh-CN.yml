@@ -7,3 +7,23 @@ zh-CN:
     language:
       choosen: "中国简体"
       dropdown: "语言"
+    issue-manage: "错误管理"
+    logout: "登出"
+  issues:
+    title: "错误管理"
+    items:
+      project: "所属项目"
+      title: "错误名称"
+      context: "详述内文"
+      asker: "报告者"
+      developer: "解决者"
+      status: "状态"
+      priority: "优先顺序"
+    action:
+      add:  "新增错误"
+      item: "动作"
+      show: "详见"
+      edit: "编辑"
+      destroy:
+        item: "删除"
+        confirm: "确定吗？"

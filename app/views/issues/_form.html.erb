@@ -12,37 +12,37 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :project %>
+    <%= form.label :project , t('issues.items.project') %>
     <%= form.text_field :project, id: :issue_project %>
   </div>
 
   <div class="field">
-    <%= form.label :title %>
+    <%= form.label :title , t('issues.items.title') %>
     <%= form.text_field :title, id: :issue_title %>
   </div>
 
   <div class="field">
-    <%= form.label :context %>
+    <%= form.label :context , t('issues.items.context') %>
     <%= form.text_area :context, id: :issue_context %>
   </div>
 
   <div class="field">
-    <%= form.label :asker %>
+    <%= form.label :asker , t('issues.items.asker') %>
     <%= form.text_field :asker, id: :issue_asker %>
   </div>
 
   <div class="field">
-    <%= form.label :developer %>
+    <%= form.label :developer , t('issues.items.developer') %>
     <%= form.text_field :developer, id: :issue_developer %>
   </div>
 
   <div class="field">
-    <%= form.label :status %>
+    <%= form.label :status , t('issues.items.status') %>
     <%= form.number_field :status, id: :issue_status %>
   </div>
 
   <div class="field">
-    <%= form.label :priority %>
+    <%= form.label :priority , t('issues.items.priority') %>
     <%= form.number_field :priority, id: :issue_priority %>
   </div>
 

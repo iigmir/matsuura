@@ -36,3 +36,23 @@ en:
     language:
       choosen: "English"
       dropdown: "Language"
+    issue-manage: "Issues manage"
+    logout: "Logout"
+  issues:
+    title: "Issues management"
+    items:
+      project: "Project"
+      title: "Title"
+      context: "Context"
+      asker: "Reporter"
+      developer: "Fixer"
+      status: "Status"
+      priority: "Priority"
+    action:
+      add:  "Add issue"
+      item: "Action"
+      show: "View"
+      edit: "Edit"
+      destroy:
+        item: "Delete"
+        confirm: "Are you sure?"

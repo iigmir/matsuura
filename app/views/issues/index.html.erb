@@ -1,18 +1,17 @@
 <p id="notice"><%= notice %></p>
 
-<h1>バグ</h1>
+<h1><%= t('issues.title') %></h1>
 
 <table class="ts table">
   <thead>
     <tr>
-      <th>プロジェクト</th>
-      <th>タイトル</th>
-      <th hidden>事状</th>
-      <th>報告者</th>
-      <th>訂正者</th>
-      <th>状況</th>
-      <th>順番</th>
-      <th colspan="3">アクション</th>
+      <th><%= t('issues.items.project') %></th>
+      <th><%= t('issues.items.title') %></th>
+      <th><%= t('issues.items.asker') %></th>
+      <th><%= t('issues.items.developer') %></th>
+      <th><%= t('issues.items.status') %></th>
+      <th><%= t('issues.items.priority') %></th>
+      <th colspan="3"><%= t('issues.action.item') %>（<%= link_to t('issues.action.add'), new_issue_path %>）</th>
     </tr>
   </thead>
 
@@ -21,19 +20,15 @@
       <tr>
         <td><%= issue.project %></td>
         <td><%= issue.title %></td>
-        <td hidden><%= issue.context %></td>
         <td><%= issue.asker %></td>
         <td><%= issue.developer %></td>
         <td><%= issue.status %></td>
         <td><%= issue.priority %></td>
-        <td><%= link_to 'よく見る', issue %></td>
-        <td><%= link_to '編集', edit_issue_path(issue) %></td>
-        <td><%= link_to '削除', issue, method: :delete, data: { confirm: 'よろしいですが？?' } %></td>
+        <td><%= link_to t('issues.action.show'), issue %></td>
+        <td><%= link_to t('issues.action.edit'), edit_issue_path(issue) %></td>
+        <td><%= link_to t('issues.action.destroy.item'), issue, method: :delete, data: { confirm: t('issues.action.destroy.confirm') } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-
 <br>
-
-<%= link_to 'New Issue', new_issue_path %>

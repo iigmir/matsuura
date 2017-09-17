@@ -7,3 +7,23 @@ zh-TW:
     language:
       choosen: "台灣正體"
       dropdown: "語言"
+    issue-manage: "錯誤管理"
+    logout: "登出"
+  issues:
+    title: "錯誤管理"
+    items:
+      project: "所屬專案"
+      title: "錯誤名稱"
+      context: "詳述內文"
+      asker: "報告者"
+      developer: "解決者"
+      status: "狀態"
+      priority: "優先順序"
+    action:
+      add:  "新增錯誤"
+      item: "動作"
+      show: "詳見"
+      edit: "編輯"
+      destroy:
+        items: "刪除"
+        confirm: "確定嗎？"

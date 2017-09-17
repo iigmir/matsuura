@@ -7,3 +7,23 @@ ja:
     language:
       choosen: "日本語"
       dropdown: "言語"
+    issue-manage: "バグ管理"
+    logout: "ログアウト"
+  issues:
+    title: "錯誤管理"
+    items:
+      project: "プロジェクト"
+      title: "タイトル"
+      context: "事状"
+      asker: "報告者"
+      developer: "訂正者"
+      status: "状況"
+      priority: "順番"
+    action:
+      add:  "Add"
+      item: "アクション"
+      show: "よく見る"
+      edit: "編集"
+      destroy:
+        item: "削除"
+        confirm: "よろしいですが？"

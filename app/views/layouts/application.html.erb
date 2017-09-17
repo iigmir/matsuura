@@ -14,22 +14,26 @@
     <main class="ts container">
         <nav class="ts pointing secondary menu">
         <% if current_user %>
-            <%= link_to "バグ管理", issues_path , class: "item" %>
-            <%= link_to "ログアウト", destroy_user_session_path , method: :delete , class: "right item" %>
+            <%= link_to t('navbar.issue-manage'), issues_path , class: "item" %>
+            <%= link_to "foobar", "#" , class: "item" %>
         <% end %>
-            <div id="i18n_menu" class="ts right item dropdown">
-                <div class="text">
-                    <%= t('navbar.language.dropdown') %>
-                    <i class="globe icon"></i>
-                </div>
-                <i class="dropdown icon"></i>
-                <div class="menu">
-                    <%= link_to "台灣正體", { locale: "zh-TW" } , { :class => "item" } %>
-                    <%= link_to "中国简体", { locale: "zh-CN" } , { :class => "item" } %>
-                    <%= link_to "English", { locale: "en" },{ class: "item" } %>
-                    <%= link_to "日本語", { locale: "ja" },{ class: "item" } %>
+            <div class="right menu">
+                <%= link_to t('navbar.logout'), destroy_user_session_path , method: :delete , class: "item" if current_user %>
+                <div id="i18n_menu" class="ts item dropdown">
+                    <div class="text">
+                        <%= t('navbar.language.dropdown') %>
+                        <i class="globe icon"></i>
+                    </div>
+                    <i class="dropdown icon"></i>
+                    <div class="menu">
+                        <%= link_to "台灣正體", { locale: "zh-TW" } , { :class => "item" } %>
+                        <%= link_to "中国简体", { locale: "zh-CN" } , { :class => "item" } %>
+                        <%= link_to "English", { locale: "en" },{ class: "item" } %>
+                        <%= link_to "日本語", { locale: "ja" },{ class: "item" } %>
+                    </div>
                 </div>
             </div>
+            
         </nav>
         <%
             ts_class = "ts positive message" if notice

@@ -1,6 +1,6 @@
 class IssuesController < ApplicationController
   before_action :set_issue, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!
+  before_action :authenticate_user!, except: [:index,:show]
 
   # GET /issues
   # GET /issues.json

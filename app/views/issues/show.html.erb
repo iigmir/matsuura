@@ -42,7 +42,7 @@
             <span class="sub header"> <%= @issue.developer %> </span>
         </h2>
         
-        <%= link_to t('issues.action.edit') , edit_issue_path(@issue) , class: "ts positive button" %>
+        <%= link_to t('issues.action.edit') , edit_issue_path(@issue) , class: "ts positive button" if current_user %>
     </div>
     <div class="twelve wide column">
         <h2 class="ts massive header">

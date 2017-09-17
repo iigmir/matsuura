@@ -7,7 +7,9 @@
       <th><%= t('issues.items.project') %></th>
       <th><%= t('issues.items.status') %></th>
       <th><%= t('issues.items.priority') %></th>
+      <% if current_user %>
       <th colspan="2"><%= t('issues.action.item') %>（<%= link_to t('issues.action.add'), new_issue_path %>）</th>
+      <% end %>
     </tr>
   </thead>
 
@@ -18,8 +20,10 @@
         <td><%= issue.project %></td>
         <td><%= issue.status %></td>
         <td><%= issue.priority %></td>
+        <% if current_user %>
         <td><%= link_to t('issues.action.edit'), edit_issue_path(issue) %></td>
         <td><%= link_to t('issues.action.destroy.item'), issue, method: :delete, data: { confirm: t('issues.action.destroy.confirm') } %></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>

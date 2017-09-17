@@ -1,69 +1,43 @@
 <p id="notice"><%= notice %></p>
 
-<%= @issue.id %>
+<h1 class="ts massive dividing header">
+    <span class="sub header">
+        <%= t'issues.number', num: @issue.id %>
+    </span>
+    <%= @issue.title %>
+</h1>
 
-<div class="ts segments">
-    <div class="ts info segment">
-        <strong>Project:</strong>
+<div class="ts grid">
+    <div class="four wide column">
+        <h2 class="ts medium header">
+            <%= t('issues.items.project') %>
+            <span class="sub header"> <%= @issue.project %> </span>
+        </h2>
+        <h2 class="ts medium header">
+            <%= t('issues.items.asker') %>
+            <span class="sub header"> <%= @issue.asker %> </span>
+        </h2>
+        <h2 class="ts medium header">
+            <%= t('issues.items.developer') %>
+            <span class="sub header"> <%= @issue.developer %> </span>
+        </h2>
+        <h2 class="ts medium header">
+            <%= t('issues.items.status') %>
+            <span class="sub header"> <%= @issue.status %> </span>
+        </h2>
+        <h2 class="ts medium header">
+            <%= t('issues.items.priority') %>
+            <span class="sub header"> <%= @issue.priority %> </span>
+        </h2>
+        <div class="ts divider"></div>
+        <%= link_to t('issues.action.edit') , edit_issue_path(@issue) , class: "ts positive button" %>
     </div>
-    <div class="ts segment">
-        <%= @issue.project %>
+    <div class="twelve wide column">
+        <h2 class="ts massive header">
+            <%= t('issues.items.context') %>
+        </h2>
+        <div>
+            <%= @issue.context %>
+        </div>
     </div>
 </div>
-
-<div class="ts segments">
-    <div class="ts info segment">
-        <strong>Title:</strong>
-    </div>
-    <div class="ts segment">
-        <%= @issue.title %>
-    </div>
-</div>
-
-<div class="ts segments">
-    <div class="ts info segment">
-        <strong>Context:</strong>
-    </div>
-    <div class="ts segment">
-        <%= @issue.context %>
-    </div>
-</div>
-
-<div class="ts segments">
-    <div class="ts info segment">
-        <strong>Asker:</strong>
-    </div>
-    <div class="ts segment">
-        <%= @issue.asker %>
-    </div>
-</div>
-
-<div class="ts segments">
-    <div class="ts info segment">
-        <strong>Developer:</strong>
-    </div>
-    <div class="ts segment">
-        <%= @issue.developer %>
-    </div>
-</div>
-
-<div class="ts segments">
-    <div class="ts info segment">
-        <strong>Status:</strong>
-    </div>
-    <div class="ts segment">
-        <%= @issue.status %>
-    </div>
-</div>
-
-<div class="ts segments">
-    <div class="ts info segment">
-        <strong>Priority:</strong>
-    </div>
-    <div class="ts segment">
-        <%= @issue.priority %>
-    </div>
-</div>
-
-<%= link_to 'Edit', edit_issue_path(@issue) %> |
-<%= link_to 'Back', issues_path %>

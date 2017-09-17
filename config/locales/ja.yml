@@ -10,7 +10,8 @@ ja:
     issue-manage: "バグ管理"
     logout: "ログアウト"
   issues:
-    title: "錯誤管理"
+    title: "バグ管理"
+    number: "バグ番号：%{num}"
     items:
       project: "プロジェクト"
       title: "タイトル"

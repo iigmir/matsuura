@@ -40,6 +40,7 @@ en:
     logout: "Logout"
   issues:
     title: "Issues management"
+    number: "Issue number: %{num}"
     items:
       project: "Project"
       title: "Title"

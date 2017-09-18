@@ -54,6 +54,7 @@ en:
       item: "Action"
       show: "View"
       edit: "Edit"
+      submit: "Submit"
       destroy:
         item: "Delete"
         confirm: "Are you sure?"

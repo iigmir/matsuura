@@ -25,6 +25,7 @@ zh-TW:
       item: "動作"
       show: "詳見"
       edit: "編輯"
+      submit: "提交"
       destroy:
         items: "刪除"
         confirm: "確定嗎？"

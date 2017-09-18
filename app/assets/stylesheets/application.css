@@ -14,12 +14,22 @@
  *= require_self
  */
 
-footer {
+body
+{
+    padding-bottom: 5rem;
+}
+
+footer
+{
     padding: 1rem;
     position: fixed;
     width: 100%;
     bottom: 0;
     background-color: #5a5a5a;
     color: #f7f7f7;
-    /*sldkgj*/
+}
+
+#issue_context
+{
+    height:160px;
 }

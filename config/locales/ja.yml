@@ -25,6 +25,7 @@ ja:
       item: "アクション"
       show: "よく見る"
       edit: "編集"
+      submit: "Submit"
       destroy:
         item: "削除"
         confirm: "よろしいですが？"

@@ -25,6 +25,7 @@ zh-CN:
       item: "动作"
       show: "详见"
       edit: "编辑"
+      submit: "提交"
       destroy:
         item: "删除"
         confirm: "确定吗？"

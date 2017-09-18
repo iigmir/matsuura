@@ -2,7 +2,6 @@
   <% if issue.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(issue.errors.count, "error") %> prohibited this issue from being saved:</h2>
-
       <ul>
       <% issue.errors.full_messages.each do |message| %>
         <li><%= message %></li>
@@ -11,14 +10,26 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :project , t('issues.items.project') %>
-    <%= form.text_field :project, id: :issue_project %>
-  </div>
+  <div class="fields">
+    <div class="six wide field">
+      <%= form.label :title , t('issues.items.title') %>
+      <%= form.text_field :title, id: :issue_title %>
+    </div>
 
-  <div class="field">
-    <%= form.label :title , t('issues.items.title') %>
-    <%= form.text_field :title, id: :issue_title %>
+    <div class="four wide field">
+      <%= form.label :project , t('issues.items.project') %>
+      <%= form.text_field :project, id: :issue_project %>
+    </div>
+
+    <div class="three wide field">
+      <%= form.label :status , t('issues.items.status') %>
+      <%= form.number_field :status, id: :issue_status %>
+    </div>
+
+    <div class="three wide field">
+      <%= form.label :priority , t('issues.items.priority') %>
+      <%= form.number_field :priority, id: :issue_priority %>
+    </div>
   </div>
 
   <div class="field">
@@ -26,27 +37,18 @@
     <%= form.text_area :context, id: :issue_context %>
   </div>
 
-  <div class="field">
-    <%= form.label :asker , t('issues.items.asker') %>
-    <%= form.text_field :asker, id: :issue_asker %>
-  </div>
-
-  <div class="field">
-    <%= form.label :developer , t('issues.items.developer') %>
-    <%= form.text_field :developer, id: :issue_developer %>
-  </div>
-
-  <div class="field">
-    <%= form.label :status , t('issues.items.status') %>
-    <%= form.number_field :status, id: :issue_status %>
-  </div>
-
-  <div class="field">
-    <%= form.label :priority , t('issues.items.priority') %>
-    <%= form.number_field :priority, id: :issue_priority %>
+  <div class="fields">
+    <div class="eight wide field">
+      <%= form.label :asker , t('issues.items.asker') %>
+      <%= form.text_field :asker, id: :issue_asker %>
+    </div>
+    <div class="eight wide field">
+      <%= form.label :developer , t('issues.items.developer') %>
+      <%= form.text_field :developer, id: :issue_developer %>
+    </div>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit t('issues.action.submit'), class:"ts primary button" %>
   </div>
 <% end %>

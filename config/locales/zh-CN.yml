@@ -29,3 +29,10 @@ zh-CN:
       destroy:
         item: "删除"
         confirm: "确定吗？"
+    status_number:
+      unconfirmed: "未确认"
+      confirmed: "已确认"
+      fixed: "已解决"
+      wontfix: "不予解决"
+      noreproduce: "无法重现"
+      other: "其他"

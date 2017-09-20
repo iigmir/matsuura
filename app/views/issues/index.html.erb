@@ -18,7 +18,7 @@
       <tr>
         <td><%= link_to issue.title, issue %></td>
         <td><%= issue.project %></td>
-        <td><%= issue.status %></td>
+        <td><%= issue_status_text(issue.status) %></td>
         <td><%= issue.priority %></td>
         <% if current_user %>
         <td><%= link_to t('issues.action.edit'), edit_issue_path(issue) %></td>

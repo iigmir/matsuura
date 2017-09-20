@@ -58,3 +58,10 @@ en:
       destroy:
         item: "Delete"
         confirm: "Are you sure?"
+    status_number:
+      unconfirmed: "Unconfirmed"
+      confirmed: "Confirmed"
+      fixed: "Fixed"
+      wontfix: "Won't fix"
+      noreproduce: "Cannot reproduce"
+      other: "Other"

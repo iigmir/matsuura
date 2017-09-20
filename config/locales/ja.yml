@@ -29,3 +29,10 @@ ja:
       destroy:
         item: "削除"
         confirm: "よろしいですが？"
+    status_number:
+      unconfirmed: "未確認"
+      confirmed: "確認した"
+      fixed: "修正した"
+      wontfix: "修正しない"
+      noreproduce: "重現しません"
+      other: "その他"

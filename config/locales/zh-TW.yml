@@ -29,3 +29,10 @@ zh-TW:
       destroy:
         items: "刪除"
         confirm: "確定嗎？"
+    status_number:
+      unconfirmed: "未確認"
+      confirmed: "已確認"
+      fixed: "已解決"
+      wontfix: "不予解決"
+      noreproduce: "無法重現"
+      other: "其他"

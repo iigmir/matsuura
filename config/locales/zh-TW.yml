@@ -8,6 +8,7 @@ zh-TW:
       choosen: "台灣正體"
       dropdown: "語言"
     issue-manage: "錯誤管理"
+    login: "登入"
     logout: "登出"
   issues:
     title: "錯誤管理"

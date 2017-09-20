@@ -37,6 +37,7 @@ en:
       choosen: "English"
       dropdown: "Language"
     issue-manage: "Issues manage"
+    login: "Login"
     logout: "Logout"
   issues:
     title: "Issues management"

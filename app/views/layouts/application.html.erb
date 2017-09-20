@@ -15,7 +15,11 @@
         <nav class="ts pointing secondary menu">
             <%= link_to t('navbar.issue-manage'), issues_path , class: "item" %>
             <div class="right menu">
-                <%= link_to t('navbar.logout'), destroy_user_session_path , method: :delete , class: "item" if current_user %>
+                <% if current_user %>
+                    <%= link_to t('navbar.logout'), destroy_user_session_path , method: :delete , class: "item" %>
+                <% else %>
+                    <%= link_to t('navbar.login'), new_user_session_path , class: "item" %>
+                <% end %>
                 <div id="i18n_menu" class="ts item dropdown">
                     <div class="text">
                         <%= t('navbar.language.dropdown') %>
@@ -30,7 +34,6 @@
                     </div>
                 </div>
             </div>
-            
         </nav>
         <%
             ts_class = "ts positive message" if notice
@@ -50,5 +53,4 @@
     <%= javascript_include_tag 'application' %>
     <%= yield :js %>
 </body>
-
 </html>

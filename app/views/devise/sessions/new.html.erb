@@ -36,8 +36,9 @@
 
         <div class="actions">
             <%= f.submit t('.sign_in') , class: "ts positive fluid button" %>
+            <div class="ts divider"></div>
+            <%= render "devise/shared/links" %>
         </div>
     <% end %>
 </div>
 
-<%#= render "devise/shared/links" %>

@@ -8,6 +8,7 @@ zh-CN:
       choosen: "中国简体"
       dropdown: "语言"
     issue-manage: "错误管理"
+    login: "登入"
     logout: "登出"
   issues:
     title: "错误管理"

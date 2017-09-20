@@ -8,6 +8,7 @@ ja:
       choosen: "日本語"
       dropdown: "言語"
     issue-manage: "バグ管理"
+    login: "ログイン"
     logout: "ログアウト"
   issues:
     title: "バグ管理"

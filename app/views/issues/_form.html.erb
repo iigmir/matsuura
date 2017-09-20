@@ -24,17 +24,28 @@
     <div class="three wide field">
       <%= form.label :status , t('issues.items.status') %>
       <%= form.number_field :status, id: :issue_status %>
+    </div>
+
+    <div class="three wide field">
+      <%= form.label :priority , t('issues.items.priority') %>
+      <%= form.number_field :priority, id: :issue_priority %>
       <small>
         <a href="#" onclick="openmodal()">
           <i class="help circle icon"></i> 點選以取得說明。
         </a>
       </small>
     </div>
+  </div>
 
-    <div class="three wide field">
-      <%= form.label :priority , t('issues.items.priority') %>
-      <%= form.number_field :priority, id: :issue_priority %>
-    </div>
+  <div class="field">
+    <details class="ts accordion" open>
+        <summary>
+            <i class="dropdown icon"></i> 狀態說明
+        </summary>
+        <div class="content">
+            <p>夏希是一個基於 PHP 的時間類別，用以取得現在的時間，或者是數天後的現在時刻。</p>
+        </div>
+    </details>
   </div>
 
   <div class="field">
@@ -57,6 +68,7 @@
     <%= form.submit t('issues.action.submit'), class:"ts primary button" %>
   </div>
 <% end %>
+
 
 <div class="ts modals dimmer">
     <dialog id="closableModal" class="ts closable tiny modal">

@@ -22,7 +22,7 @@
         <div class="column">
             <h2 class="ts medium header">
                 <%= t('issues.items.status') %>
-                <span class="sub header"> <%= @issue.status %> </span>
+                <span class="sub header"> <%= issue_status_text( @issue.status ) %> </span>
             </h2>    
         </div>
     </div>

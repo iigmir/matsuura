@@ -1,13 +1,13 @@
 <%= form_with(model: issue, local: true, html:({class:"ts form"})) do |form| %>
   <% if issue.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(issue.errors.count, "error") %> prohibited this issue from being saved:</h2>
-      <ul>
-      <% issue.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
+  <div id="error_explanation">
+    <h2><%= pluralize(issue.errors.count, "error") %> prohibited this issue from being saved:</h2>
+    <ul>
+    <% issue.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+    </ul>
+  </div>
   <% end %>
 
   <div class="fields">
@@ -24,6 +24,11 @@
     <div class="three wide field">
       <%= form.label :status , t('issues.items.status') %>
       <%= form.number_field :status, id: :issue_status %>
+      <small>
+        <a href="#" onclick="openmodal()">
+          <i class="help circle icon"></i> 點選以取得說明。
+        </a>
+      </small>
     </div>
 
     <div class="three wide field">
@@ -51,4 +56,26 @@
   <div class="actions">
     <%= form.submit t('issues.action.submit'), class:"ts primary button" %>
   </div>
+<% end %>
+
+<div class="ts modals dimmer">
+    <dialog id="closableModal" class="ts closable tiny modal">
+        <div class="content">
+            <p>點擊淡化幕也能夠關閉這個視窗，因為這是個 <span class="ts horizontal label">closable</span> 對話視窗。</p>
+        </div>
+        <div class="actions">
+            <button class="ts deny button">
+                不
+            </button>
+            <button class="ts positive button">
+                是的
+            </button>
+        </div>
+    </dialog>
+</div>
+
+<%= content_for :js do %>
+<script>
+  function openmodal() { ts('#closableModal').modal("show"); }
+</script>
 <% end %>

@@ -3,6 +3,7 @@
 <table class="ts very basic table">
   <thead>
     <tr>
+      <th><%= "ID" %></th>
       <th><%= t('issues.items.title') %></th>
       <th><%= t('issues.items.project') %></th>
       <th><%= t('issues.items.status') %></th>
@@ -16,6 +17,7 @@
   <tbody>
     <% @issues.each do |issue| %>
       <tr>
+        <td><%= issue.id %></td>
         <td><%= link_to issue.title, issue %></td>
         <td><%= issue.project %></td>
         <td><%= issue_status_text(issue.status) %></td>

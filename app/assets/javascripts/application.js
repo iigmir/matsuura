@@ -12,5 +12,15 @@
 //
 //= require rails-ujs
 //= require_tree .
+//= require_self
 
-ts('nav #i18n_menu').dropdown();
+// ts('nav #i18n_menu').dropdown();
+function opencmodal()
+{
+    ts("#cmodal").modal("show");
+}
+
+function cssl()
+{
+    console.log("Hi")
+}

@@ -30,7 +30,7 @@
       <%= form.label :priority , t('issues.items.priority') %>
       <%= form.number_field :priority, id: :issue_priority %>
       <small>
-        <a href="#" onclick="openmodal()">
+        <a href="#" onclick="opencmodal()">
           <i class="help circle icon"></i> 點選以取得說明。
         </a>
       </small>
@@ -43,7 +43,7 @@
             <i class="dropdown icon"></i> 狀態說明
         </summary>
         <div class="content">
-            <p>夏希是一個基於 PHP 的時間類別，用以取得現在的時間，或者是數天後的現在時刻。</p>
+            <p>What?</p>
         </div>
     </details>
   </div>
@@ -71,23 +71,12 @@
 
 
 <div class="ts modals dimmer">
-    <dialog id="closableModal" class="ts closable tiny modal">
-        <div class="content">
-            <p>點擊淡化幕也能夠關閉這個視窗，因為這是個 <span class="ts horizontal label">closable</span> 對話視窗。</p>
-        </div>
-        <div class="actions">
-            <button class="ts deny button">
-                不
-            </button>
-            <button class="ts positive button">
-                是的
-            </button>
-        </div>
-    </dialog>
+  <dialog id="cmodal" class="ts closable tiny modal" data-modal-initialized="true">
+    <div class="content">
+      <p>點擊淡化幕也能夠關閉這個視窗</p>
+    </div>
+    <div class="actions">
+      <button class="ts positive button"> 是的 </button>
+    </div>
+  </dialog>
 </div>
-
-<%= content_for :js do %>
-<script>
-  function openmodal() { ts('#closableModal').modal("show"); }
-</script>
-<% end %>

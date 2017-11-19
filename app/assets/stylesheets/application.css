@@ -13,24 +13,3 @@
  *= require_tree .
  *= require_self
  */
-
-body
-{
-    padding-bottom: 5rem;
-}
-
-footer
-{
-    width: 100%;
-    bottom: 0;
-    z-index: 100;
-    position: fixed;
-    padding: 1rem;
-    background-color: #5a5a5a;
-    color: #f7f7f7;
-}
-
-#issue_context
-{
-    height:160px;
-}

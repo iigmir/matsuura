@@ -11,16 +11,20 @@
 // about supported directives.
 //
 //= require rails-ujs
-//= require_tree .
+//= require tocas
 //= require_self
 
-// ts('nav #i18n_menu').dropdown();
-function opencmodal()
+ts("nav #i18n_menu").dropdown();
+
+document.querySelector("footer .close.button").addEventListener("click", close_animation);
+function close_animation()
 {
-    ts("#cmodal").modal("show");
+    document.querySelector("footer").setAttribute("hidden", true);    
 }
 
-function cssl()
+document.querySelector(".status_help").addEventListener("click", help_modal);
+function help_modal()
 {
-    console.log("Hi")
+    document.querySelector("#status_helptext").style.display = "block";
+    ts("#status_helptext").modal("show");
 }

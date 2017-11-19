@@ -19,33 +19,29 @@
     <div class="four wide field">
       <%= form.label :project , t('issues.items.project') %>
       <%= form.text_field :project, id: :issue_project %>
+      <small>
+        目前只能註冊到一個專案。
+      </small>
     </div>
 
     <div class="three wide field">
       <%= form.label :status , t('issues.items.status') %>
-      <%= form.number_field :status, id: :issue_status %>
+      <%= form.select( :status, status_list() , select: 0 ) %>
+      <small class="status_help" hidden>
+        <a href="#">
+          <i class="help circle icon"></i> 點選此連結以取得狀態說明。
+        </a>
+      </small>
+      <!-- id="issue_status" name="issue[status]" /> -->
     </div>
 
     <div class="three wide field">
       <%= form.label :priority , t('issues.items.priority') %>
       <%= form.number_field :priority, id: :issue_priority %>
       <small>
-        <a href="#" onclick="opencmodal()">
-          <i class="help circle icon"></i> 點選以取得說明。
-        </a>
+        優先順序以 1 最大逐次遞減。<br />0 為尚未排序。
       </small>
     </div>
-  </div>
-
-  <div class="field">
-    <details class="ts accordion" open>
-        <summary>
-            <i class="dropdown icon"></i> 狀態說明
-        </summary>
-        <div class="content">
-            <p>What?</p>
-        </div>
-    </details>
   </div>
 
   <div class="field">
@@ -68,15 +64,3 @@
     <%= form.submit t('issues.action.submit'), class:"ts primary button" %>
   </div>
 <% end %>
-
-
-<div class="ts modals dimmer">
-  <dialog id="cmodal" class="ts closable tiny modal" data-modal-initialized="true">
-    <div class="content">
-      <p>點擊淡化幕也能夠關閉這個視窗</p>
-    </div>
-    <div class="actions">
-      <button class="ts positive button"> 是的 </button>
-    </div>
-  </dialog>
-</div>

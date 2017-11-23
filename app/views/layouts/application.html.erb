@@ -14,6 +14,9 @@
     <main class="ts container">
         <nav class="ts pointing secondary menu">
             <%= link_to t('navbar.issue-manage'), issues_path , class: "item" %>
+            <%#= link_to t('navbar.projs-manage'), issues_path , class: "item" %>
+            <%= link_to "User" , member_path( current_user.id ) , class: "item" %> <!-- t('navbar.membr-manage') -->
+            
             <div class="right menu">
                 <% if current_user %>
                     <%= link_to t('navbar.logout'), destroy_user_session_path , method: :delete , class: "item" %>

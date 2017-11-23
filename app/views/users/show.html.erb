@@ -1,0 +1,14 @@
+<h1 class="ts header"> 用戶資料 </h1>
+
+<div class="ts grid">
+    <div class="eight wide column">
+        <div class="ts primary segment">
+            <ul>
+                <li> Email: <%= @my.email %> </li>
+                <% if @its_me %>
+                <li> <%= link_to "更改用戶資料" , edit_user_registration_path  %> </li>
+                <% end %>
+            </ul>
+        </div>
+    </div>
+</div>

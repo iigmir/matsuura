@@ -9,7 +9,10 @@
       <th><%= t('issues.items.status') %></th>
       <th><%= t('issues.items.priority') %></th>
       <% if current_user %>
-      <th colspan="2"><%= t('issues.action.item') %>（<%= link_to t('issues.action.add'), new_issue_path %>）</th>
+      <th colspan="2">
+        <%= t('issues.action.item') %>
+        <%= link_to t('issues.action.add'), new_issue_path , class: "ts positive basic mini button" %>
+      </th>
       <% end %>
     </tr>
   </thead>
